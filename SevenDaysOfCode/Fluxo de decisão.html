@@ -1,0 +1,74 @@
+<html>
+
+<script>
+
+function startGame() {
+  console.log("Bem-vindo ao jogo de desenvolvimento!");
+
+  const area = window. prompt("1. Escolha a área: digite (1) Front-End ou (2)Back-End: ");
+
+  if (area.toLowerCase() === "1") {
+    const frontEndChoice = window. prompt("2. Escolha (1)React ou (2)Vue: ");
+    console.log(`Você escolheu Front-End e vai aprender ${frontEndChoice}.`);
+  } else if (area.toLowerCase() === "2") {
+    const backEndChoice = window. prompt("2. Escolha C# ou Java: ");
+    console.log(`Você escolheu Back-End e vai aprender ${backEndChoice}.`);
+  } else {
+    console.log("Opção inválida. Reinicie o jogo e escolha uma área válida.");
+    
+    return;
+  }
+
+  const specializationChoice = window.prompt(
+    "3. Deseja se especializar na área escolhida digite (1) ou (2) se tornar Fullstack? "
+  );
+
+  if (specializationChoice.toLowerCase() === "1") {
+    console.log("Continue se aprimorando na sua área escolhida.");
+  } else if (specializationChoice.toLowerCase() === "2") {
+    console.log(
+      "Você está no caminho para se tornar um desenvolvedor Fullstack."
+    );
+  } else {
+    console.log("Opção inválida. Reinicie o jogo e escolha uma opção válida.");
+    
+    return;
+  }
+
+  let technologies = [];
+  let moreTechnologies = true;
+
+  while (moreTechnologies) {
+    const tech = window. prompt(
+      "Digite uma tecnologia que você gostaria de aprender: "
+    );
+    technologies.push(tech);
+
+    const continueChoice = window. prompt(
+      "Tem mais alguma tecnologia que você gostaria de aprender? (Responda '1' para continuar ou '2' para encerrar): "
+    );
+   if (moreTechnologies = continueChoice.toLowerCase() === "1"){
+
+   }
+   else { continueChoice.toLowerCase() === "2";
+   
+  console.log("Você escolheu as seguintes tecnologias para aprender:");
+  technologies.forEach((tech) => {
+    console.log(`- ${tech}`);
+  });
+
+  console.log(
+    "Parabéns por jogar o jogo de desenvolvimento! Espero que se divirta aprendendo e programando."
+  );
+  
+
+   return;
+
+  }
+
+}
+}
+startGame();
+
+</script>
+</html>
