@@ -1,68 +1,98 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo de Desenvolvimento</title>
+</head>
+<body>
 
 <script>
-
+// Define a função startGame() que inicia o jogo
 function startGame() {
+  // Mensagem de boas-vindas
   console.log("Bem-vindo ao jogo de desenvolvimento!");
 
-  const area = window. prompt("1. Escolha a área: digite (1) Front-End ou (2)Back-End: ");
+  // Pede ao usuário para escolher entre Front-End e Back-End
+  const area = window.prompt("1. Escolha a área: digite (1) Front-End ou (2) Back-End: ");
 
+  // Verifica a escolha do usuário e exibe a escolha da tecnologia dentro da área selecionada
   if (area.toLowerCase() === "1") {
-    const frontEndChoice = window. prompt("2. Escolha (1)React ou (2)Vue: ");
+    const frontEndChoice = window.prompt("2. Escolha (1) React ou (2) Vue: ");
     console.log(`Você escolheu Front-End e vai aprender ${frontEndChoice}.`);
   } else if (area.toLowerCase() === "2") {
-    const backEndChoice = window. prompt("2. Escolha C# ou Java: ");
+    const backEndChoice = window.prompt("2. Escolha C# ou Java: ");
     console.log(`Você escolheu Back-End e vai aprender ${backEndChoice}.`);
   } else {
+    // Se a escolha do usuário for inválida, mostra uma mensagem de erro e encerra o jogo
     console.log("Opção inválida. Reinicie o jogo e escolha uma área válida.");
-    
     return;
   }
 
+  // Pergunta ao usuário se deseja se especializar na área escolhida ou se tornar Fullstack
   const specializationChoice = window.prompt(
-    "3. Deseja se especializar na área escolhida digite (1) ou (2) se tornar Fullstack? "
+    "3. Deseja se especializar na área escolhida? Digite (1) para sim ou (2) para se tornar Fullstack: "
   );
 
+  // Verifica a escolha de especialização do usuário e exibe uma mensagem correspondente
   if (specializationChoice.toLowerCase() === "1") {
     console.log("Continue se aprimorando na sua área escolhida.");
   } else if (specializationChoice.toLowerCase() === "2") {
-    console.log(
-      "Você está no caminho para se tornar um desenvolvedor Fullstack."
-    );
+    console.log("Você está no caminho para se tornar um desenvolvedor Fullstack.");
   } else {
+    // Se a escolha do usuário for inválida, mostra uma mensagem de erro e encerra o jogo
     console.log("Opção inválida. Reinicie o jogo e escolha uma opção válida.");
-    
     return;
   }
 
+  // Cria um array para armazenar as tecnologias escolhidas
   let technologies = [];
   let moreTechnologies = true;
 
+  // Loop para permitir que o usuário adicione mais tecnologias, se desejar
   while (moreTechnologies) {
-    const tech = window. prompt(
+    // Pede ao usuário para inserir uma tecnologia
+    const tech = window.prompt(
       "Digite uma tecnologia que você gostaria de aprender: "
     );
+    // Adiciona a tecnologia ao array
     technologies.push(tech);
 
-    const continueChoice = window. prompt(
+    // Pergunta ao usuário se ele deseja adicionar mais tecnologias ou encerrar
+    const continueChoice = window.prompt(
       "Tem mais alguma tecnologia que você gostaria de aprender? (Responda '1' para continuar ou '2' para encerrar): "
     );
-   if (moreTechnologies = continueChoice.toLowerCase() === "1"){
 
-   }
-   else { continueChoice.toLowerCase() === "2";
-   
+    // Verifica se o usuário quer continuar adicionando tecnologias ou encerrar
+    if (continueChoice.toLowerCase() === "1") {
+      // Se a escolha for 1, continua o loop para adicionar mais tecnologias
+    } else if (continueChoice.toLowerCase() === "2") {
+      // Se a escolha for 2, encerra o loop
+      moreTechnologies = false;
+    } else {
+      // Se a escolha do usuário for inválida, mostra uma mensagem de erro e encerra o jogo
+      console.log("Opção inválida. Reinicie o jogo e escolha uma opção válida.");
+      return;
+    }
+  }
+
+  // Exibe as tecnologias escolhidas pelo usuário
   console.log("Você escolheu as seguintes tecnologias para aprender:");
   technologies.forEach((tech) => {
     console.log(`- ${tech}`);
   });
 
-  console.log(
-    "Parabéns por jogar o jogo de desenvolvimento! Espero que se divirta aprendendo e programando."
-  );
-  
+  // Mensagem de finalização do jogo
+  console.log("Parabéns por jogar o jogo de desenvolvimento! Espero que se divirta aprendendo e programando.");
+}
 
-   return;
+// Chama a função startGame() quando a página é carregada
+startGame();
+</script>
+
+</body>
+</html>
+
 
   }
 
