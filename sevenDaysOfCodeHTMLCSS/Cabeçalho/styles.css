@@ -1,0 +1,59 @@
+/* Resetando as margens e definindo a fonte padrão */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilizando o cabeçalho da navbar */
+.navbar {
+    display: flex; /* Utilizando flexbox para alinhar os itens */
+    justify-content: space-between; /* Distribui os itens uniformemente */
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 20px; /* Adiciona um espaço interno */
+    background-color: #333; /* Cor de fundo */
+    color: white; /* Cor do texto */
+}
+
+/* Estilizando o logotipo */
+.logo img {
+    max-width: 100px; /* Define a largura máxima da imagem */
+}
+
+/* Estilizando o menu de navegação */
+.pages ul {
+    list-style-type: none; /* Removendo marcadores de lista */
+    margin: 0; /* Removendo margens */
+    padding: 0; /* Removendo preenchimento */
+    display: flex; /* Utilizando flexbox para alinhar os itens */
+}
+
+/* Estilizando os itens do menu */
+.pages li {
+    margin-right: 20px; /* Adiciona espaçamento entre os itens */
+}
+
+/* Estilizando os links do menu */
+.pages a {
+    text-decoration: none; /* Removendo sublinhado */
+    color: white; /* Cor do texto */
+}
+
+/* Estilizando os botões */
+.buttons {
+    display: flex; /* Utilizando flexbox para alinhar os botões */
+}
+
+.buttons button {
+    margin-left: 10px; /* Adiciona espaçamento entre os botões */
+    padding: 8px 15px; /* Adiciona preenchimento interno */
+    border: none; /* Removendo borda */
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+}
+
+/* Estilizando o efeito hover nos botões */
+.buttons button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
